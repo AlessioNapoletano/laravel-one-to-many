@@ -1,0 +1,11 @@
+@use './partials/welcome';
+@import '~bootstrap/scss/bootstrap';
+
+main {
+    background-image: url('https://laurenthinoul.com/wp-content/uploads/2016/05/ios-developer-wallpaper.jpg');
+    background-size: cover;
+    height: 100vh;
+    overflow-y: scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
