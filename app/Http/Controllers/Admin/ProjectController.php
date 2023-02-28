@@ -24,7 +24,8 @@ class ProjectController extends Controller
          'title' => ['required', 'unique:projects', 'string', 'min:2', 'max:200'],
          'content' => ['required', 'string', 'min:2'],
          'post_date' => ['required'],
-         'cover_image' =>['required']
+         'cover_image' =>['required'],
+         'type_id' => ['required']
       ];
 
       /**
@@ -43,7 +44,10 @@ class ProjectController extends Controller
 
          'post_date.required' => 'E\' necessario inserire la data di creazione del progetto',
 
-         'cover_image' => 'E\' necessario inserire il path dell\'immagine cover del progetto'
+         'cover_image.required' => 'E\' necessario inserire il path dell\'immagine cover del progetto',
+
+         'type_id.required' => 'E\' necessario inserire il tipo del progetto inserito'
+
         ];
 
 
