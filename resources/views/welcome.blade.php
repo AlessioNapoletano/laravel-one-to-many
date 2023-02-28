@@ -19,12 +19,19 @@
                             alt="{{ $project->title }} image" class="img-fluid">
     
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-center mb-3">
-                                {{ $project->title }}
+                            <h5 class="card-title fw-bold mb-3 d-flex justify-content-around">
+                                <span>
+                                    {{ $project->title }}
+                                </span>
+                                
+                                <span class="btn btn-success rounded-3">
+                                    {{ $project->type->type }}
+                                </span>
+                                
                             </h5>
     
                             <!--Data di creazione del progetto-->
-                            <p class="card-text text-end">
+                            <p class="card-text text-center">
                                 <span class="fw-bold">
                                     Data Di Creazione: 
                                 </span>
