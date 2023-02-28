@@ -54,10 +54,10 @@
             @endforeach
         </div>
         
-        <div class="pagination">
-            <span>
+        <div class="container">
+            <div class="fw-bold">
                 {{ $projects->links() }}
-            </span>
+            </div>    
         </div>
 </section>
 
