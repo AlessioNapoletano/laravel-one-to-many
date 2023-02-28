@@ -4,7 +4,7 @@
 
 <section class="dashboard">
     <div class="container">
-        <h2 class="fs-4 text-secondary my-4">
+        <h2 class="fs-4 text-dark fw-bold my-4 ">
             {{ __('Dashboard') }}
         </h2>
         <div class="row justify-content-center">
