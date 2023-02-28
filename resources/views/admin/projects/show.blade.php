@@ -11,9 +11,13 @@
         @include('admin.projects.partials.session-message')
 
         <div class="card">
-            <div class="card-header text-center">
+            <div class="card-header d-flex justify-content-around">
                 <p class="fw-bold">
                     {{ $project->author }}
+                </p>
+
+                <p class="fw-bold">
+                    {{ $project->type->type }}
                 </p>
               
             </div>
