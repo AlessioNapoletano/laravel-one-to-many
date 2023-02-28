@@ -12,11 +12,6 @@ class Project extends Model
     use SoftDeletes;
     protected $fillable = ['title', 'slug', 'author', 'cover_image', 'content', 'post_date'];
 
-    /**
-    * Get the route key for the model.
-    *
-    * @return string
-    */
     public function getRouteKeyName()
     {
         return 'slug';
@@ -24,6 +19,10 @@ class Project extends Model
 
     public function isImageAUrl(){
         return filter_var($this->cover_image, FILTER_VALIDATE_URL);
+    }
+
+    public function type() {
+        return $this->belongsTo(Type::class);
     }
 }
 
