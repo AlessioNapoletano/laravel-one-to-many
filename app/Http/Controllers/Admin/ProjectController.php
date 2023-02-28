@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth as Auth;
 use Illuminate\Support\Str as Str;
 use Illuminate\Support\Facades\Storage as Storage;
 use Illuminate\Support\Facades\DB;
+use App\Models\Type;
 
 
 class ProjectController extends Controller
@@ -68,7 +69,8 @@ class ProjectController extends Controller
      */
     public function create(Project $project)
     {
-        return view('admin.projects.create', compact('project'));
+        $types = Type::all();
+        return view('admin.projects.create', compact('project' , 'types'));
     }
 
 
@@ -112,7 +114,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $types = Type::all();
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
     /**
