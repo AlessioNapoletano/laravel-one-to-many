@@ -27,16 +27,13 @@
                 </div>
             @enderror 
         </div>
-
+        
         <div class="mb-3">
             <label for="type_id">Seleziona il Tipo</label>
             <select  class="form-control" id="type_id" name="type_id" >
                 @foreach ($types as $type)
-                    <option value="{{ $type->id }}"{{ old('type_id', $project->type_id) ==  $type->id ? 'selected' : '' }}>
-
-                        <span >
-                            {{ $type->type }}
-                        </span>
+                    <option value="{{ $type->id }}" @selected(old('type_id') == $type->id)>
+                        {{ $type->type }}
                     </option>
                 @endforeach
             </select>
